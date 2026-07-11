@@ -16,12 +16,12 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        // Montando o texto da mensagem e quebrando linhas com %0A
+      // Procure por esse bloco no seu script.js e mude a última linha:
         const mensagem = `*Solicitação de Pré-Orçamento* 🛠️%0A%0A` +
-                         `*Cliente:* ${nome}%0A` +
-                         `*Aparelho:* ${aparelho}%0A` +
-                         `*Defeito relatado:* ${defeito}%0A%0A` +
-                         `_Estou abrindo o chat para te enviar as fotos do aparelho!_`;
+                 `*Cliente:* ${nome}%0A` +
+                 `*Aparelho:* ${aparelho}%0A` +
+                 `*Defeito relatado:* ${defeito}%0A%0A` +
+                 `_Aguardando o envio das fotos do aparelho para avaliação, caso for possivel!_`; // <- Nova frase aqui!
 
         // Criando a URL final do link do WhatsApp
         const urlFinal = `https://wa.me/${meuNumero}?text=${mensagem}`;
