@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lange Reparos | Orçamento Rápido</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho / Logo -->
+    <header>
+        <div class="container">
+            <h1>Lange<span>Reparos</span></h1>
+            <p>Especialistas em Assistência Técnica de Celulares</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Seção do Formulário -->
+        <section class="card-orcamento">
+            <h2>Solicitar Pré-Orçamento 🛠️</h2>
+            <p class="subtitulo">Preencha os dados abaixo e mude para o WhatsApp para nos enviar as fotos e finalizar.</p>
+            
+            <form id="formOrcamento">
+                <div class="campo">
+                    <label for="nome">Seu Nome</label>
+                    <input type="text" id="nome" placeholder="Ex: João Silva" required>
+                </div>
+
+                <div class="campo">
+                    <label for="aparelho">Aparelho e Modelo</label>
+                    <input type="text" id="aparelho" placeholder="Ex: iPhone 12, Galaxy S22" required>
+                </div>
+
+                <div class="campo">
+                    <label for="defeito">O que aconteceu com ele?</label>
+                    <textarea id="defeito" rows="4" placeholder="Ex: A tela trincou após uma queda / A bateria não segura carga..." required></textarea>
+                </div>
+
+                <div class="aviso-fotos">
+                    <p>📸 <strong>Dica:</strong> Assim que a conversa abrir no WhatsApp, envie fotos do aparelho para agilizar seu orçamento!</p>
+                </div>
+
+                <button type="button" id="btnEnviar">Enviar para o WhatsApp</button>
+            </form>
+        </section>
+
+        <!-- Seção de Feedbacks -->
+        <section class="feedbacks">
+            <h2>O que nossos clientes dizem ⭐</h2>
+            <div class="grade-feedbacks">
+                <div class="card-feedback">
+                    <p class="depoimento">"Serviço rápido e de extrema qualidade. Troquei a bateria do meu celular e ficou novo de novo!"</p>
+                    <p class="autor"><strong>- Carlos S.</strong></p>
+                </div>
+                <div class="card-feedback">
+                    <p class="depoimento">"Preço justo e atendimento excelente. Super recomendo o trabalho!"</p>
+                    <p class="autor"><strong>- Mariana R.</strong></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lange Reparos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script href="script.js"></script>
+</body>
+</html>
