@@ -18,27 +18,21 @@
     <main class="container">
         <section class="card-orcamento">
             <h2>Solicitar Pré-Orçamento 🛠️</h2>
-           <!-- Seção do Formulário -->
-        <section class="card-orcamento">
-            <h2>Solicitar Pré-Orçamento 🛠️</h2>
             <p class="subtitulo">Preencha os dados abaixo e mude para o WhatsApp para nos enviar as fotos e finalizar.</p>
             
             <form id="formOrcamento">
                 <div class="campo">
                     <label for="nome">Seu Nome</label>
-                    <!-- Ajustado para idNome -->
                     <input type="text" id="idNome" placeholder="Ex: João Silva" required>
                 </div>
 
                 <div class="campo">
                     <label for="aparelho">Aparelho e Modelo</label>
-                    <!-- Ajustado para idAparelho -->
                     <input type="text" id="idAparelho" placeholder="Ex: iPhone 12, Galaxy S22" required>
                 </div>
 
                 <div class="campo">
                     <label for="defeito">O que aconteceu com ele?</label>
-                    <!-- Ajustado para idDefeito -->
                     <textarea id="idDefeito" rows="4" placeholder="Ex: A tela trincou após uma queda / A bateria não segura carga..." required></textarea>
                 </div>
 
@@ -68,10 +62,25 @@
             </div>
 
             <div class="acao-feedback">
-                <p>Gostou do nosso serviço?</p>
-                <a href="https://wa.me/5547988516005?text=Ol%C3%A1!%20Gostei%20muito%20do%20servi%C3%A7o%20e%20vim%20deixar%20o%20meu%20feedback!" target="_blank" class="btn-feedback">
-                    Deixar minha avaliação
-                </a>
+                <h3>Gostou do nosso serviço? Deixe sua avaliação!</h3>
+                <form id="formFeedback">
+                    <div class="campo" style="margin-bottom: 10px;">
+                        <input type="text" id="feedNome" placeholder="Seu Nome (Ex: João S.)" required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0;">
+                    </div>
+                    <div class="campo" style="margin-bottom: 10px;">
+                        <select id="feedEstrelas" required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; background: white;">
+                            <option value="⭐⭐⭐⭐⭐">5 Estrelas (Excelente)</option>
+                            <option value="⭐⭐⭐⭐">4 Estrelas (Muito Bom)</option>
+                            <option value="⭐⭐⭐">3 Estrelas (Regular)</option>
+                            <option value="⭐⭐">2 Estrelas (Ruim)</option>
+                            <option value="⭐">1 Estrela (Péssimo)</option>
+                        </select>
+                    </div>
+                    <div class="campo" style="margin-bottom: 15px;">
+                        <textarea id="feedTexto" rows="3" placeholder="Escreva aqui o que achou do nosso atendimento..." required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-family: inherit;"></textarea>
+                    </div>
+                    <button type="submit" class="btn-feedback" style="cursor: pointer; border: none;">Publicar Avaliação</button>
+                </form>
             </div>
         </section>
     </main>
