@@ -16,12 +16,11 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-      // Procure por esse bloco no seu script.js e mude a última linha:
-        const mensagem = `*Solicitação de Pré-Orçamento* 🛠️%0A%0A` +
+     const mensagem = `*Solicitação de Pré-Orçamento* 🛠️%0A%0A` +
                  `*Cliente:* ${nome}%0A` +
                  `*Aparelho:* ${aparelho}%0A` +
                  `*Defeito relatado:* ${defeito}%0A%0A` +
-                 `_Aguardando o envio das fotos do aparelho para avaliação, caso for possivel!_`; // <- Nova frase aqui!
+                 `_Aguardando o envio das fotos do aparelho para avaliação, caso for possível!_`;S
 
         // Criando a URL final do link do WhatsApp
         const urlFinal = `https://wa.me/${meuNumero}?text=${mensagem}`;

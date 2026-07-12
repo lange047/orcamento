@@ -125,38 +125,91 @@ button:hover {
 /* Seção de Feedbacks */
 .feedbacks {
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .feedbacks h2 {
     font-size: 1.3rem;
-    margin-bottom: 15px;
-    text-align: center;
+    margin-bottom: 20px;
+    color: var(--texto-escuro);
 }
 
-.grade-feedbacks {
+.cards-feedbacks {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-bottom: 25px;
 }
 
-.card-feedback {
+/* Cartão do Feedback adaptado ao seu padrão */
+.card {
     background: #ffffff;
-    padding: 15px;
+    padding: 18px;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    text-align: left;
+    border-left: 4px solid var(--cor-whats); /* Linha verde sutil na lateral */
+}
+
+.estrelas {
+    margin-bottom: 8px;
+    font-size: 1rem;
 }
 
 .depoimento {
     font-style: italic;
     color: #475569;
     font-size: 0.95rem;
+    line-height: 1.5;
 }
 
-.autor {
-    margin-top: 5px;
-    text-align: right;
+.cliente {
+    margin-top: 8px;
     font-size: 0.85rem;
+    color: var(--texto-escuro);
+    font-weight: 600;
+}
+
+.aparelho {
     color: var(--texto-claro);
+    font-weight: normal;
+}
+
+/* Área de ação para deixar feedback */
+.acao-feedback {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-top: 25px;
+}
+
+.acao-feedback p {
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--texto-escuro);
+}
+
+/* Botão de Feedback usando a cor azul padrão do seu site */
+.btn-feedback {
+    display: inline-block;
+    background-color: var(--cor-principal);
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+    width: 100%;
+    max-width: 280px;
+}
+
+.btn-feedback:hover {
+    background-color: var(--cor-hover);
 }
 
 /* Rodapé */
