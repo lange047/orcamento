@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lange Reparos | Orçamento Rápido</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <h1>Lange<span>Reparos</span></h1>
-            <p>Especialistas em Assistência Técnica de Celulares</p>
+        <div class="container header-conteudo">
+            <div class="header-textos">
+                <h1>Lange<span>Reparos</span></h1>
+                <p>Especialistas em Assistência Técnico de Celulares</p>
+            </div>
+            <img src="logo.png" alt="Lange Reparos Logo" class="logo-topo">
         </div>
     </header>
 
@@ -22,21 +25,21 @@
             
             <form id="formOrcamento">
                 <div class="campo">
-                    <label for="nome">Seu Nome</label>
+                    <label for="idNome">Seu Nome</label>
                     <input type="text" id="idNome" placeholder="Ex: João Silva" required>
                 </div>
 
                 <div class="campo">
-                    <label for="aparelho">Aparelho e Modelo</label>
+                    <label for="idAparelho">Aparelho e Modelo</label>
                     <input type="text" id="idAparelho" placeholder="Ex: iPhone 12, Galaxy S22" required>
                 </div>
 
                 <div class="campo">
-                    <label for="defeito">O que aconteceu com ele?</label>
+                    <label for="idDefeito">O que aconteceu com ele?</label>
                     <textarea id="idDefeito" rows="4" placeholder="Ex: A tela trincou após uma queda / A bateria não segura carga..." required></textarea>
                 </div>
 
-                <div class="aviso-fotos">
+                <div class="aviso-fotos" style="background-color: #f3e8ff; border-left: 4px solid var(--cor-principal); color: #6b21a8;">
                     <p>📸 <strong>Dica:</strong> Assim que a conversa abrir no WhatsApp, envie fotos do aparelho para agilizar seu orçamento!</p>
                 </div>
 
@@ -64,11 +67,11 @@
             <div class="acao-feedback">
                 <h3>Gostou do nosso serviço? Deixe sua avaliação!</h3>
                 <form id="formFeedback">
-                    <div class="campo" style="margin-bottom: 10px;">
-                        <input type="text" id="feedNome" placeholder="Seu Nome (Ex: João S.)" required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0;">
+                    <div class="campo">
+                        <input type="text" id="feedNome" placeholder="Seu Nome (Ex: João S.)" required>
                     </div>
-                    <div class="campo" style="margin-bottom: 10px;">
-                        <select id="feedEstrelas" required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; background: white;">
+                    <div class="campo">
+                        <select id="feedEstrelas" required>
                             <option value="⭐⭐⭐⭐⭐">5 Estrelas (Excelente)</option>
                             <option value="⭐⭐⭐⭐">4 Estrelas (Muito Bom)</option>
                             <option value="⭐⭐⭐">3 Estrelas (Regular)</option>
@@ -76,10 +79,10 @@
                             <option value="⭐">1 Estrela (Péssimo)</option>
                         </select>
                     </div>
-                    <div class="campo" style="margin-bottom: 15px;">
-                        <textarea id="feedTexto" rows="3" placeholder="Escreva aqui o que achou do nosso atendimento..." required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-family: inherit;"></textarea>
+                    <div class="campo">
+                        <textarea id="feedTexto" rows="3" placeholder="Escreva aqui o que achou do nosso atendimento..." required></textarea>
                     </div>
-                    <button type="submit" class="btn-feedback" style="cursor: pointer; border: none;">Publicar Avaliação</button>
+                    <button type="submit" class="btn-feedback">Publicar Avaliação</button>
                 </form>
             </div>
         </section>
