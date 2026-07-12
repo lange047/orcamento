@@ -1,12 +1,14 @@
-/* Configurações Gerais */
+/* ==========================================================================
+   1. VARIÁVEIS E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
 :root {
-    --cor-principal: #2563eb;
-    --cor-hover: #1d4ed8;
-    --cor-whats: #25D366;
-    --cor-whats-hover: #128C7E;
-    --bg-site: #f8fafc;
-    --texto-escuro: #1e293b;
-    --texto-claro: #64748b;
+    --cor-principal: #2563eb;    /* Azul padrão do site */
+    --cor-hover: #1d4ed8;        /* Azul do hover do botão */
+    --cor-whats: #25d366;        /* Verde do WhatsApp */
+    --cor-whats-hover: #1ebd58;  /* Verde hover */
+    --texto-escuro: #1e293b;     /* Cinza escuro para títulos */
+    --texto-claro: #64748b;      /* Cinza claro para subtítulos e rodapé */
+    --fundo-site: #f4f7f6;        /* Cor de fundo suave do site */
 }
 
 * {
@@ -17,112 +19,141 @@
 }
 
 body {
-    background-color: var(--bg-site);
-    color: var(--texto-escuro);
+    background-color: var(--fundo-site);
+    color: #333;
     line-height: 1.6;
 }
 
 .container {
-    width: 90%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
 }
 
-/* Cabeçalho */
+/* ==========================================================================
+   2. CABEÇALHO (HEADER) & LOGO NEON
+   ========================================================================== */
 header {
-    background-color: #ffffff;
-    padding: 30px 0;
-    text-align: center;
-    border-bottom: 1px solid #e2e8f0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #fff;
+    padding: 40px 0;
+    border-bottom: 4px solid #00d2ff;
     margin-bottom: 30px;
 }
 
-header h1 {
-    font-size: 2rem;
-    color: var(--texto-escuro);
+.header-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-header h1 span {
-    color: var(--cor-principal);
+.header-textos h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
 }
 
-header p {
-    color: var(--texto-claro);
-    font-size: 0.95rem;
+.header-textos h1 span {
+    color: #00d2ff;
 }
 
-/* Cartão do Formulário */
+.header-textos p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+/* Estilização da Logo Neon */
+.logo-topo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00d2ff;
+    box-shadow: 0 0 12px rgba(0, 210, 255, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.logo-topo:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   3. SEÇÃO DE ORÇAMENTO (FORMULÁRIO PRINCIPAL)
+   ========================================================================== */
 .card-orcamento {
     background: #ffffff;
-    padding: 25px;
+    padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-}
-
-.card-orcamento h2 {
-    margin-bottom: 5px;
-    font-size: 1.5rem;
-}
-
-.subtitulo {
-    color: var(--texto-claro);
-    font-size: 0.9rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .campo {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 label {
     display: block;
     margin-bottom: 6px;
     font-weight: 600;
-    font-size: 0.9rem;
+    color: #475569;
 }
 
-input, textarea {
+input[type="text"], select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: border-color 0.2s;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    font-size: 0.95rem;
+    color: var(--texto-escuro);
+    transition: all 0.3s ease;
 }
 
-input:focus, textarea:focus {
+input[type="text"]:focus, select:focus, textarea:focus {
     outline: none;
     border-color: var(--cor-principal);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .aviso-fotos {
-    background-color: #eff6ff;
-    border-left: 4px solid var(--cor-principal);
-    padding: 12px;
-    border-radius: 4px;
+    background-color: #e0f2fe;
+    border-left: 4px solid #0284c7;
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
     margin-bottom: 20px;
-    font-size: 0.85rem;
+    color: #0369a1;
 }
 
-button {
-    background-color: var(--cor-whats);
-    color: #ffffff;
-    border: none;
-    padding: 14px;
+/* Botão do WhatsApp */
+#btnEnviar {
+    display: inline-block;
     width: 100%;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: bold;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    text-align: center;
+    background-color: var(--cor-whats);
+    color: white;
+    border: none;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: all 0.3s ease;
 }
 
-button:hover {
+#btnEnviar:hover {
     background-color: var(--cor-whats-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
 }
 
-/* Seção de Feedbacks */
+/* ==========================================================================
+   4. SEÇÃO DE FEEDBACKS E AVALIAÇÕES
+   ========================================================================== */
 .feedbacks {
     margin-bottom: 40px;
     text-align: center;
@@ -141,15 +172,15 @@ button:hover {
     margin-bottom: 25px;
 }
 
-/* Cartão do Feedback adaptado ao seu padrão */
+/* Cartão do Feedback individual */
 .card {
     background: #ffffff;
     padding: 18px;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     text-align: left;
-    border-left: 4px solid var(--cor-whats); /* Linha verde sutil na lateral */
+    border-left: 4px solid var(--cor-whats);
 }
 
 .estrelas {
@@ -171,51 +202,68 @@ button:hover {
     font-weight: 600;
 }
 
-.aparelho {
-    color: var(--texto-claro);
-    font-weight: normal;
-}
-
-/* Área de ação para deixar feedback */
+/* Box para deixar uma nova avaliação */
 .acao-feedback {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 25px;
     border-radius: 12px;
     border: 1px solid #e2e8f0;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     margin-top: 25px;
+    text-align: left;
 }
 
-.acao-feedback p {
-    margin-bottom: 12px;
+.acao-feedback h3 {
+    margin-bottom: 15px;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--texto-escuro);
+    text-align: center;
 }
 
-/* Botão de Feedback usando a cor azul padrão do seu site */
+/* Garante a flexibilidade interna do formulário */
+.acao-feedback form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Botão de Enviar Feedback */
 .btn-feedback {
     display: inline-block;
     background-color: var(--cor-principal);
     color: #ffffff;
-    padding: 12px 24px;
+    padding: 14px 24px;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
     font-size: 0.95rem;
-    transition: background-color 0.2s;
+    transition: all 0.2s ease;
     width: 100%;
     max-width: 280px;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+    border: none;
+    cursor: pointer;
 }
 
 .btn-feedback:hover {
     background-color: var(--cor-hover);
+    transform: translateY(-1px);
 }
 
-/* Rodapé */
+/* ==========================================================================
+   5. RODAPÉ & RESPONSIVIDADE
+   ========================================================================== */
 footer {
     text-align: center;
     padding: 20px 0;
     color: var(--texto-claro);
     font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+    .header-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
 }
