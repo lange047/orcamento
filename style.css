@@ -2,14 +2,13 @@
    1. VARIÁVEIS E CONFIGURAÇÕES GERAIS
    ========================================================================== */
 :root {
-    :root {
-    --cor-principal: #7c3aed;    /* Roxo Metálico/Neon principal */
-    --cor-hover: #6d28d9;        /* Roxo mais escuro para o efeito de passar o mouse */
-    --cor-whats: #25d366;        /* Verde do WhatsApp */
-    --cor-whats-hover: #1ebd58;  /* Verde hover */
-    --texto-escuro: #1e293b;     /* Cinza escuro para títulos */
-    --texto-claro: #64748b;      /* Cinza claro para subtítulos e rodapé */
-    --fundo-site: #f4f7f6;        /* Cor de fundo suave do site */
+    --cor-principal: #7c3aed;    /* Roxo Metálico */
+    --cor-hover: #6d28d9;        /* Roxo mais escuro */
+    --cor-whats: #25d366;        
+    --cor-whats-hover: #1ebd58;  
+    --texto-escuro: #1e293b;     
+    --texto-claro: #64748b;      
+    --fundo-site: #f4f7f6;        
 }
 
 * {
@@ -39,11 +38,14 @@ header {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: #fff;
     padding: 40px 0;
-    border-bottom: 4px solid #00d2ff;
+    border-bottom: 4px solid var(--cor-principal);
     margin-bottom: 30px;
 }
 
 .header-conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,7 +59,7 @@ header {
 }
 
 .header-textos h1 span {
-    color: #00d2ff;
+    color: var(--cor-principal);
 }
 
 .header-textos p {
@@ -72,8 +74,8 @@ header {
     height: 90px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #00d2ff;
-    box-shadow: 0 0 12px rgba(0, 210, 255, 0.4);
+    border: 2px solid var(--cor-principal);
+    box-shadow: 0 0 12px rgba(124, 58, 237, 0.4);
     transition: transform 0.3s ease;
 }
 
@@ -118,7 +120,7 @@ input[type="text"]:focus, select:focus, textarea:focus {
     outline: none;
     border-color: var(--cor-principal);
     background-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
 }
 
 .aviso-fotos {
@@ -242,7 +244,7 @@ input[type="text"]:focus, select:focus, textarea:focus {
     transition: all 0.2s ease;
     width: 100%;
     max-width: 280px;
-    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+    box-shadow: 0 2px 4px rgba(124, 58, 237, 0.2);
     border: none;
     cursor: pointer;
 }
