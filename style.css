@@ -2,8 +2,9 @@
    1. VARIÁVEIS E CONFIGURAÇÕES GERAIS
    ========================================================================== */
 :root {
-    --cor-principal: #2563eb;    /* Azul padrão do site */
-    --cor-hover: #1d4ed8;        /* Azul do hover do botão */
+    :root {
+    --cor-principal: #7c3aed;    /* Roxo Metálico/Neon principal */
+    --cor-hover: #6d28d9;        /* Roxo mais escuro para o efeito de passar o mouse */
     --cor-whats: #25d366;        /* Verde do WhatsApp */
     --cor-whats-hover: #1ebd58;  /* Verde hover */
     --texto-escuro: #1e293b;     /* Cinza escuro para títulos */
