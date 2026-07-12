@@ -1,31 +1,23 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const botao = document.getElementById("btnEnviar");
+document.getElementById('btnEnviar').addEventListener('click', function() {
+    // Captura os valores dos campos do formulário
+    const nome = document.getElementById('idNome').value.trim();
+    const aparelho = document.getElementById('idAparelho').value.trim();
+    const defeito = document.getElementById('idDefeito').value.trim();
 
-    botao.addEventListener("click", function() {
-        // --- INSIRA SEU NÚMERO AQUI (Apenas números: Código do país + DDD + Número) ---
-        const meuNumero = "5547988516005"; 
+    // Validação simples: não deixa enviar se houver campos vazios
+    if (nome === "" || aparelho === "" || defeito === "") {
+        alert("Por favor, preencha todos os campos antes de enviar!");
+        return;
+    }
 
-        // Capturando os inputs do HTML
-        const nome = document.getElementById("nome").value.trim();
-        const aparelho = document.getElementById("aparelho").value.trim();
-        const defeito = document.getElementById("defeito").value.trim();
+    // Monta a mensagem formatada para o seu WhatsApp
+    const numeroTelefone = "5547988516005";
+    const textoMensagem = `Olá, me chamo ${nome}!\nGostaria de um orçamento para o meu aparelho: *${aparelho}*.\n\n*Defeito relatado:*\n${defeito}`;
+    
+    // Codifica o texto para o formato de link do navegador
+    const mensagemFormatada = encodeURIComponent(textoMensagem);
 
-        // Validação básica para não enviar campos vazios
-        if (nome === "" || aparelho === "" || defeito === "") {
-            alert("Por favor, preencha todos os campos antes de continuar!");
-            return;
-        }
-
-     const mensagem = `*Solicitação de Pré-Orçamento* 🛠️%0A%0A` +
-                 `*Cliente:* ${nome}%0A` +
-                 `*Aparelho:* ${aparelho}%0A` +
-                 `*Defeito relatado:* ${defeito}%0A%0A` +
-                 `_Aguardando o envio das fotos do aparelho para avaliação, caso for possível!_`;S
-
-        // Criando a URL final do link do WhatsApp
-        const urlFinal = `https://wa.me/${meuNumero}?text=${mensagem}`;
-
-        // Abre a janela do WhatsApp em uma nova aba
-        window.open(urlFinal, "_blank");
-    });
+    // Cria o link final e redireciona o usuário
+    const urlWhatsApp = `https://wa.me/${numeroTelefone}?text=${mensagemFormatada}`;
+    window.open(urlWhatsApp, '_blank');
 });
